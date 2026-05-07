@@ -22,11 +22,11 @@ export async function middleware(request: NextRequest) {
           supabaseResponse.cookies.set({ name, value, ...options })
         },
         remove(name: string, options: Record<string, unknown>) {
-          request.cookies.delete({ name, ...options })
+          request.cookies.delete(name)
           supabaseResponse = NextResponse.next({
             request,
           })
-          supabaseResponse.cookies.delete({ name, ...options })
+          supabaseResponse.cookies.delete(name)
         },
       },
     }
