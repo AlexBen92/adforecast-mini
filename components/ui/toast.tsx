@@ -90,6 +90,7 @@ const ToastViewport = React.forwardRef<
 ToastViewport.displayName = "ToastViewport"
 
 export {
+  type VariantProps,
   Toast,
   ToastTitle,
   ToastDescription,
